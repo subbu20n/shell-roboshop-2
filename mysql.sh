@@ -5,7 +5,7 @@ souece ./common.sh
 check_root
 
 echo "please enter root password to setup"
-read -s "$MYSQL_ROOT_PASSWORD"
+read -s $MYSQL_ROOT_PASSWORD
 
 dnf install mysql-server -y &>>$LOG_FILE
 VALIDATE $? "Installing mysql server"
