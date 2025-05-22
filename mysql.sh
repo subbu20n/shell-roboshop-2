@@ -1,6 +1,6 @@
 #!/bin/bash
 app_name=mysql
-souece ./common.sh
+source ./common.sh
 
 check_root
 
