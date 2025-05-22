@@ -5,7 +5,7 @@ app_name=mongodb
 
 check_root
 
-cp $SCRIPT_DIR/mongo.repo /etc/yum.repos.d/mongod.repo
+cp mongo.repo /etc/yum.repos.d/mongod.repo
 VALIDATE $? "Copying mongodb repo"
 
 dnf install mongodb-org -y &>>$LOG_FILE
