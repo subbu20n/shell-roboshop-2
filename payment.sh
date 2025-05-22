@@ -8,4 +8,4 @@ app_setup
 python_setup
 systemd_setup
 
-print_time | tee -a $LOG_FIL
+print_time | tee -a $LOG_FILE
