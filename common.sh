@@ -64,6 +64,14 @@ maven_setup(){
     VALIDATE $? "Moving and Renaming Jar file"
 }
 
+payment_setup(){
+    dnf install python3 gcc python3-devel -y &>>$LOG_FILE
+    VALIDATE $? "Install python3 packages"
+
+     pip3 install -r requirements.txt &>>$LOG_FILE
+     VALIDATE $? "Installing  depenencies"
+}
+
 systemd_setup(){
     cp $SCRIPT_DIR/$app_name.service /etc/systemd/system/$app_name.service
     VALIDATE $? "Copying $app_name service"
