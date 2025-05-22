@@ -14,7 +14,7 @@ systemd_setup
 dnf install mysql -y &>>$LOG_FILE
 VALIDATE $? "Installing mysql"
 
-mysql -h mysql.subbuaws.site -uroot -p$MYSQL_ROOT_PASSWORD -e 'use cities' &>>$LOG_FILE
+mysql -h mysql.subbuaws.site -uroot -p$MYSQL_ROOT_PASSWORD -e 'use cities' &>>$LOG_g
 
 if [ $? -ne 0 ]
 then 
