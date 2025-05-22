@@ -15,7 +15,7 @@ systemctl enable rabbitmq-server &>>$LOG_FILE
 VALIDATE $? "Enabling rabbitmq-server"
 
 systemctl start rabbitmq-server &>>$LOG_FILE 
-VALIDATE $? "start rabbitmq-server"
+VALIDATE $? "starting rabbitmq server"
 
 rabbitmqctl add_user roboshop $RABBITMQ_PASSWD &>>$LOG_FILE 
 rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>$LOG_FILE 
