@@ -64,7 +64,7 @@ maven_setup(){
     VALIDATE $? "Moving and Renaming Jar file"
 }
 
-payment_setup(){
+python_setup(){
     dnf install python3 gcc python3-devel -y &>>$LOG_FILE
     VALIDATE $? "Install python3 packages"
 
