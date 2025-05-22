@@ -20,7 +20,7 @@ VALIDATE $? "Edited redis conf file to accept remote connections"
 systemctl enable redis 
 VALIDATE $? "Enabling redis"
 
-Systemctl start redis 
+systemctl start redis 
 VALIDATE $? "Starting redis"
 
 print_time | tee -a $LOG_FILE
