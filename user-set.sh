@@ -42,13 +42,13 @@ fi
 # fi 
 # }
 
-dnf module disable nodejs -y &>>$LOG_FILE
+dnf module disable nodejs -y &>>$LOG_FILE   
 #VALIDATE $? "Disabling nodejs"
 
 dnf module enable nodejs:20 -y &>>$LOG_FILE
 #VALIDATE $? "Enabling nodejs" 
 
-dnf install nodejs -y &>>$LOG_FILE 
+dnf install nodejssfgjkk -y &>>$LOG_FILE  # here we are keeping ERROR "nodejssfgjkk" for testing purpose 
 #VALIDATE $? "installing nodejs" 
 
 id roboshop
