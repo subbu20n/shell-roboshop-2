@@ -5,7 +5,7 @@ app_name=mongodb
 
 check_root
 
-cp mongo.repo /etc/yum.repos.d/mongod.repo
+cp mongo.repo /etc/yum.repos.d/mongo.repo
 VALIDATE $? "Copying mongodb repo"
 
 dnf install mongodb-org -y &>>$LOG_FILE
@@ -17,7 +17,7 @@ VALIDATE $? "Enabling mongodb"
 systemctl start mongod &>>$LOG_FILE
 VALIDATE $? "Starting mongodb"
 
-sed -i  's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf
+sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf
 VALIDATE $? "Editing mongodb conf file for remote connections"
 
 systemctl restart mongod &>>$LOG_FILE
