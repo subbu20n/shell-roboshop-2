@@ -23,4 +23,4 @@ VALIDATE $? "Enabling redis"
 systemctl start redis &>>$LOG_FILE
 VALIDATE $? "Starting redis"
 
-print_time | tee -a $LOG_FILE
+print_time | tee -a $LOG_FILE 

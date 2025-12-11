@@ -19,4 +19,4 @@ VALIDATE $? "Starting mysql"
 mysql_secure_installation --set-root-pass $MYSQL_ROOT_PASSWORD &>>$LOG_FILE
 VALIDATE $? "setting mysql root password"
 
-print_time | tee -a $LOG_FILE
+print_time | tee -a $LOG_FILE 

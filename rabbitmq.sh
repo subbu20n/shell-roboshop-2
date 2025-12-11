@@ -20,4 +20,4 @@ VALIDATE $? "starting rabbitmq server"
 rabbitmqctl add_user roboshop $RABBITMQ_PASSWD &>>$LOG_FILE 
 rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>$LOG_FILE 
 
-print_time | tee -a $LOG_FILE
+print_time | tee -a $LOG_FILE 

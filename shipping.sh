@@ -24,5 +24,5 @@ then
 else
     echo -e "data is already loaded into mysql ... $Y SKIPPING $N" &>>$LOG_FILE
 fi
-
+ 
 print_time | tee -a $LOG_FILE

@@ -6,4 +6,4 @@ nodejs_setup
 check_root
 systemd_setup
 
-print_time | tee -a $LOG_FILE
+print_time | tee -a $LOG_FILE 
